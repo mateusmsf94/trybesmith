@@ -6,6 +6,11 @@ const addProduct = async (product: IProduct) => {
   return prod;
 };
 
-const productService = { addProduct };
+const getAllProducts = async () => {
+  const products = await productModel.getAllProducts();
+  return products;
+};
+
+const productService = { addProduct, getAllProducts };
 
 export default productService;
